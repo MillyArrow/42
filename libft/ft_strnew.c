@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 01:20:20 by marrow            #+#    #+#             */
-/*   Updated: 2019/09/12 01:24:53 by marrow           ###   ########.fr       */
+/*   Updated: 2019/09/15 02:32:37 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 char	*ft_strnew(size_t size)
 {
+	if (size >= 65535)
+		return (NULL);
 	return (ft_memalloc(size + 1));
 }

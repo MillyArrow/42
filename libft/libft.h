@@ -6,16 +6,22 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 03:46:46 by marrow            #+#    #+#             */
-/*   Updated: 2019/09/14 07:59:47 by marrow           ###   ########.fr       */
+/*   Updated: 2019/09/15 11:34:36 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define LLONG_MAX 9223372036854775807
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}				t_list;
 
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
@@ -78,5 +84,6 @@ char			**ft_strsplit(char const *s, char c);
 char			*ft_itoa(int n);
 void			ft_putnbr(int n);
 void			ft_putnbr_fd(int n, int fd);
+t_list			*ft_create_elem(void *data);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 00:02:33 by marrow            #+#    #+#             */
-/*   Updated: 2019/09/14 05:39:38 by marrow           ###   ########.fr       */
+/*   Updated: 2019/09/15 03:16:12 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		start = word_start(s, end, c);
 		end = word_end(s, start, c);
-		if (s[start] == 0)
+		if (s[start] == '\0')
 			break ;
 		if (!(result[i++] = ft_strsub((const char *)s, start, end - start)))
 			return (free_string(result));

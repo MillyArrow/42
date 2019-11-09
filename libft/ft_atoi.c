@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 23:10:53 by marrow            #+#    #+#             */
-/*   Updated: 2019/09/12 04:40:44 by marrow           ###   ########.fr       */
+/*   Updated: 2019/09/15 11:07:14 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		ft_atoi(const char *c)
 		prev = number;
 		number = number * 10 + *c - '0';
 		c++;
-		if (number < prev || (number - 1 >= LLONG_MAX))
+		if (number / 10 != prev)
 			return (sign > 0 ? -1 : 0);
 	}
 	return ((int)(number * sign));

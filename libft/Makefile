@@ -6,7 +6,7 @@
 #    By: marrow <marrow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/05 21:44:43 by marrow            #+#    #+#              #
-#    Updated: 2019/09/14 09:57:52 by marrow           ###   ########.fr        #
+#    Updated: 2019/09/15 11:33:25 by marrow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 INC = libft.h
 SRC =	ft_atoi.c \
 		ft_bzero.c \
+		ft_create_elem.c \
 		ft_copybyte.c \
 		ft_isblanki.c \
 		ft_islower.c \

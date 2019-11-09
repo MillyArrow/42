@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/14 09:51:23 by marrow            #+#    #+#             */
-/*   Updated: 2019/09/14 09:55:09 by marrow           ###   ########.fr       */
+/*   Created: 2019/09/15 11:26:06 by marrow            #+#    #+#             */
+/*   Updated: 2019/09/15 11:26:32 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main()
+t_list	*ft_create_elem(void *data)
 {
-	printf("%s",memchr(NULL,0,0));
-	printf("%s",ft_memchr(NULL,0,0));
+	t_list *list;
 
-	return (0);
+	if (!(list = malloc(sizeof(t_list))))
+		return (NULL);
+	list->content = data;
+	list->next = NULL;
+	return (list);
 }
