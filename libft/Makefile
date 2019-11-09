@@ -6,7 +6,7 @@
 #    By: marrow <marrow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/05 21:44:43 by marrow            #+#    #+#              #
-#    Updated: 2019/09/15 11:33:25 by marrow           ###   ########.fr        #
+#    Updated: 2019/11/10 02:40:08 by marrow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRC =	ft_atoi.c \
 		ft_itoa.c \
 		ft_put{char,str,endl,nbr}.c \
 		ft_put{char,str,endl,nbr}_fd.c \
+		ft_lst{new,add,del,delone,iter,map}.c \
 
 OBJ = $(SRC:.c=.o)
 
