@@ -12,7 +12,6 @@
 
 NAME = libft.a
 
-CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 INC = libft.h
 SRC =	ft_atoi.c \
@@ -80,15 +79,19 @@ SRC =	ft_atoi.c \
 		ft_lstdelone.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_strchri.c \
+		get_next_line.c \
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	@$(CC) $(CFLAGS) -c $(SRC) -I $(INC)
+$(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
+
+%.o: %.c $(INC)
+	@$(CC) $(CFLAGS) -c $< -o $@ -I $(INC)
 
 clean:
 	@/bin/rm -f $(OBJ)
@@ -97,3 +100,5 @@ fclean: clean
 	@/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean all re
