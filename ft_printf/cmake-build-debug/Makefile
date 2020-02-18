@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/marrow/ft_printf
+CMAKE_SOURCE_DIR = /Users/marrow/42/ft_printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/marrow/ft_printf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/marrow/42/ft_printf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marrow/ft_printf/cmake-build-debug/CMakeFiles /Users/marrow/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles /Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marrow/ft_printf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2121,6 +2121,33 @@ sources/ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_printf.c.s
 .PHONY : sources/ft_printf.c.s
 
+sources/ft_s.o: sources/ft_s.c.o
+
+.PHONY : sources/ft_s.o
+
+# target to build an object file
+sources/ft_s.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_s.c.o
+.PHONY : sources/ft_s.c.o
+
+sources/ft_s.i: sources/ft_s.c.i
+
+.PHONY : sources/ft_s.i
+
+# target to preprocess a source file
+sources/ft_s.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_s.c.i
+.PHONY : sources/ft_s.c.i
+
+sources/ft_s.s: sources/ft_s.c.s
+
+.PHONY : sources/ft_s.s
+
+# target to generate assembly for a file
+sources/ft_s.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_s.c.s
+.PHONY : sources/ft_s.c.s
+
 sources/ft_type.o: sources/ft_type.c.o
 
 .PHONY : sources/ft_type.o
@@ -2433,6 +2460,9 @@ help:
 	@echo "... sources/ft_printf.o"
 	@echo "... sources/ft_printf.i"
 	@echo "... sources/ft_printf.s"
+	@echo "... sources/ft_s.o"
+	@echo "... sources/ft_s.i"
+	@echo "... sources/ft_s.s"
 	@echo "... sources/ft_type.o"
 	@echo "... sources/ft_type.i"
 	@echo "... sources/ft_type.s"

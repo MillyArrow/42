@@ -6,6 +6,6 @@ int main()
 	char c;
 
 	c = 'f';
-	printf("%c\n",'1');
-	ft_printf("%c\n", '2');
+	printf("hello, %s.\n", NULL);
+	ft_printf("hello, %s.\n", NULL);
 }

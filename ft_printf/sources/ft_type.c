@@ -18,4 +18,6 @@ void			ft_type(t_spec *specifier, va_list args)
 		ft_d(specifier, args);
 	if (specifier->type == 'c')
 		ft_c(specifier, args);
+	if (specifier->type == 's')
+		ft_s(specifier, args);
 }

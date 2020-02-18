@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 20:13:23 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/10 20:36:08 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/18 20:19:01 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void			ft_set_width(char *str, size_t *i, t_spec *specifier)
 
 void			ft_set_accuracy(char *str, size_t *i, t_spec *specifier)
 {
-	size_t accuracy;
+	int accuracy;
 
 	accuracy = 0;
 	if (str[*i] == '.' && (*i)++)
@@ -94,6 +94,8 @@ void			ft_set_accuracy(char *str, size_t *i, t_spec *specifier)
 		}
 		specifier->accuracy = 0;
 	}
+	else
+		specifier->accuracy = -1;
 }
 
 void			ft_set_length(char *str, size_t *i, t_spec *specifier)

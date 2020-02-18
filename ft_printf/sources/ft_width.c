@@ -6,19 +6,19 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 23:30:10 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/12 14:24:27 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/18 20:23:04 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	    ft_width(t_spec *specifier, size_t length)
+void	    ft_width(t_spec *specifier, int length)
 {
 
 	if (specifier->width <= 0)
 		return ;
-	if (specifier->width < specifier->accuracy)
-		length = (int)(specifier->width - specifier->accuracy);
+	if ((int)specifier->width < specifier->accuracy)
+		length = (int)((int)specifier->width - specifier->accuracy);
 	else
 		length = (int)(specifier->width - length);
 	while (length-- > 0)

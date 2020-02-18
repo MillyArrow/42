@@ -227,6 +227,10 @@ CMakeFiles/ft_printf.dir/sources/ft_printf.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_printf.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_printf.c.o: ../sources/ft_printf.c
 
+CMakeFiles/ft_printf.dir/sources/ft_s.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/sources/ft_s.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/sources/ft_s.c.o: ../sources/ft_s.c
+
 CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../sources/ft_type.c

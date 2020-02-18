@@ -73,6 +73,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/sources/ft_d.c.o"
   "CMakeFiles/ft_printf.dir/sources/ft_format_specifier.c.o"
   "CMakeFiles/ft_printf.dir/sources/ft_printf.c.o"
+  "CMakeFiles/ft_printf.dir/sources/ft_s.c.o"
   "CMakeFiles/ft_printf.dir/sources/ft_type.c.o"
   "CMakeFiles/ft_printf.dir/sources/ft_width.c.o"
   "CMakeFiles/ft_printf.dir/sources/main.c.o"
