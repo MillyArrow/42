@@ -17,6 +17,8 @@ int		ft_number_length(intmax_t number)
 	int length;
 
 	length = 1;
+	if (number < 0)
+		length++;
 	while ((number /= 10) > 0)
 		length++;
 	return (length);

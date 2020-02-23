@@ -32,8 +32,39 @@ __int64_t	get_number(t_spec *specifier, va_list args)
 		number = (long)number;
 	else
 		number = (int)number;
+	if (number < 0)
+		specifier->minus = 1;
 	number = (__int64_t)number;
 	return (number);
+}
+
+void	    ft_accuracy(t_spec *specifier, int length)
+{
+	if (length >= (int)specifier->accuracy)
+		return ;
+	length = (int)specifier->accuracy - length;
+	while (length-- > 0)
+		ft_putchar('0');
+}
+
+void	    ft_width(t_spec *specifier, int length)
+{
+
+	if (specifier->width <= 0)
+		return ;
+	if ((int)specifier->width < specifier->accuracy)
+		length = (int)((int)specifier->width - specifier->accuracy);
+	else
+		length = (int)(specifier->width - length);
+	if (specifier->minus == 1)
+		length--;
+	while (length-- > 0)
+	{
+		if (specifier->flag == '0')
+			ft_putchar('0');
+		else
+			ft_putchar (' ');
+	}
 }
 
 void		ft_d(t_spec *specifier, va_list args)
@@ -45,5 +76,7 @@ void		ft_d(t_spec *specifier, va_list args)
 	length = ft_number_length(number);
 	ft_width(specifier,length);
 	ft_accuracy(specifier,length);
+	if (specifier->flag == '+' && specifier->minus != 1)
+		ft_putchar('+');
 	ft_putnbrll(number);
 }

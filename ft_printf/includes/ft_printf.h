@@ -25,6 +25,7 @@ typedef struct	s_spec
 	char		length[3];
 	char		type;
 	char		*format;
+	char		plus;
 	char		minus;
 }				t_spec;
 

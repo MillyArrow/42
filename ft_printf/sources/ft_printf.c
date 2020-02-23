@@ -47,7 +47,6 @@ int			ft_printf(const char *restrict format, ...)
 			ft_type(specifier,parameters);
 		}
 		printed++;
-		//i++;
 	}
 	va_end(parameters);
 	return (printed);
