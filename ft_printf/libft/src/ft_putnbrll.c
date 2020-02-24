@@ -22,10 +22,7 @@ void	ft_putnbrll(__int64_t n)
 		return ;
 	}
 	if (n < 0)
-	{
 		n *= -1;
-		ft_putchar('-');
-	}
 	if (n < 10)
 	{
 		ft_putchar(n + '0');

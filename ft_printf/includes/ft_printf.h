@@ -19,7 +19,7 @@
 
 typedef struct	s_spec
 {
-	char		flag;
+	char		flag[5];
 	size_t		width;
 	int 		accuracy;
 	char		length[3];

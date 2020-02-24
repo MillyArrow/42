@@ -14,8 +14,7 @@
 
 void		initialization(t_spec *specifier)
 {
-//	ft_bzero(specifier->flag, sizeof(char) * 5);
-	specifier->flag = 0;
+	ft_bzero(specifier->flag, sizeof(char) * 5);
 	specifier->width = 0;
 	specifier->accuracy = 0;
 	ft_bzero(specifier->length, 3);

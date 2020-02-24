@@ -21,7 +21,7 @@ void		ft_c(t_spec *specifaer, va_list args)
 	c = (char)va_arg(args, int);
 	if (specifaer->width > 1)
 	{
-			if (specifaer->flag == '-')
+			if (specifaer->flag[0] == '-')
 			{
 				ft_putchar(c);
 				while (i++ < (specifaer->width - 1))

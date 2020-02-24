@@ -40,16 +40,16 @@ t_spec			*ft_format_specifier(char *str, size_t *i, t_spec *specifier)
 
 void			ft_set_flag(char *str, size_t *i, t_spec *specifier)
 {
-	if (str[*i] == '#' && (*i)++)
-		specifier->flag = '#';
-	if (str[*i] == '0' && (*i)++)
-		specifier->flag = '0';
-	if (str[*i] == '-' && (*i)++)
-		specifier->flag = '-';
-	if (str[*i] == '+' && (*i)++)
-		specifier->flag = '+';
 	if (str[*i] == ' ' && (*i)++)
-		specifier->flag = ' ';
+		specifier->flag[2] = ' ';
+	if (str[*i] == '0' && (*i)++)
+		specifier->flag[4] = '0';
+	if (str[*i] == '+' && (*i)++)
+		specifier->flag[1] = '+';
+	if (str[*i] == '-' && (*i)++)
+		specifier->flag[0] = '-';
+	if (str[*i] == '#' && (*i)++)
+		specifier->flag[3] = '#';
 }
 
 void			ft_set_width(char *str, size_t *i, t_spec *specifier)

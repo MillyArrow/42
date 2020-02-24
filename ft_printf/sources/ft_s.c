@@ -30,7 +30,7 @@ void		ft_s(t_spec *specifaer, va_list args)
 	}
 	if (specifaer->width > len)
 	{
-		if (specifaer->flag == '-')
+		if (specifaer->flag[0] == '-')
 		{
 			ft_putstr(length);
 			while (i++ < (specifaer->width - len))

@@ -73,14 +73,12 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/marrow/42/ft_printf/libft/src/ft_tolower.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/src/ft_tolower.c.o"
   "/Users/marrow/42/ft_printf/libft/src/ft_toupper.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/src/ft_toupper.c.o"
   "/Users/marrow/42/ft_printf/libft/src/get_next_line.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/src/get_next_line.c.o"
-  "/Users/marrow/42/ft_printf/sources/ft_accuracy.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_accuracy.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_c.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_c.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_d.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_d.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_format_specifier.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_format_specifier.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_printf.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_printf.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_s.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_s.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_type.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_type.c.o"
-  "/Users/marrow/42/ft_printf/sources/ft_width.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_width.c.o"
   "/Users/marrow/42/ft_printf/sources/main.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

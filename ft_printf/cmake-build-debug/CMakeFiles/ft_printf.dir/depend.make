@@ -207,10 +207,6 @@ CMakeFiles/ft_printf.dir/libft/src/ft_toupper.c.o: ../libft/src/ft_toupper.c
 CMakeFiles/ft_printf.dir/libft/src/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/libft/src/get_next_line.c.o: ../libft/src/get_next_line.c
 
-CMakeFiles/ft_printf.dir/sources/ft_accuracy.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/sources/ft_accuracy.c.o: ../libft/includes/libft.h
-CMakeFiles/ft_printf.dir/sources/ft_accuracy.c.o: ../sources/ft_accuracy.c
-
 CMakeFiles/ft_printf.dir/sources/ft_c.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_c.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_c.c.o: ../sources/ft_c.c
@@ -234,10 +230,6 @@ CMakeFiles/ft_printf.dir/sources/ft_s.c.o: ../sources/ft_s.c
 CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../sources/ft_type.c
-
-CMakeFiles/ft_printf.dir/sources/ft_width.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/sources/ft_width.c.o: ../libft/includes/libft.h
-CMakeFiles/ft_printf.dir/sources/ft_width.c.o: ../sources/ft_width.c
 
 CMakeFiles/ft_printf.dir/sources/main.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/main.c.o: ../libft/includes/libft.h

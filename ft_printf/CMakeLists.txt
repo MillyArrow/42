@@ -78,11 +78,10 @@ add_executable(ft_printf
         libft/src/ft_tolower.c
         libft/src/ft_toupper.c
         libft/src/get_next_line.c
-        sources/ft_accuracy.c
         sources/ft_c.c
         sources/ft_d.c
         sources/ft_format_specifier.c
         sources/ft_printf.c
+        sources/ft_s.c
         sources/ft_type.c
-        sources/ft_width.c
-        sources/main.c sources/ft_s.c)
+        sources/main.c)

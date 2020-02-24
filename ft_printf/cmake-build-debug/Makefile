@@ -1986,33 +1986,6 @@ libft/src/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/src/get_next_line.c.s
 .PHONY : libft/src/get_next_line.c.s
 
-sources/ft_accuracy.o: sources/ft_accuracy.c.o
-
-.PHONY : sources/ft_accuracy.o
-
-# target to build an object file
-sources/ft_accuracy.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_accuracy.c.o
-.PHONY : sources/ft_accuracy.c.o
-
-sources/ft_accuracy.i: sources/ft_accuracy.c.i
-
-.PHONY : sources/ft_accuracy.i
-
-# target to preprocess a source file
-sources/ft_accuracy.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_accuracy.c.i
-.PHONY : sources/ft_accuracy.c.i
-
-sources/ft_accuracy.s: sources/ft_accuracy.c.s
-
-.PHONY : sources/ft_accuracy.s
-
-# target to generate assembly for a file
-sources/ft_accuracy.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_accuracy.c.s
-.PHONY : sources/ft_accuracy.c.s
-
 sources/ft_c.o: sources/ft_c.c.o
 
 .PHONY : sources/ft_c.o
@@ -2174,33 +2147,6 @@ sources/ft_type.s: sources/ft_type.c.s
 sources/ft_type.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_type.c.s
 .PHONY : sources/ft_type.c.s
-
-sources/ft_width.o: sources/ft_width.c.o
-
-.PHONY : sources/ft_width.o
-
-# target to build an object file
-sources/ft_width.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_width.c.o
-.PHONY : sources/ft_width.c.o
-
-sources/ft_width.i: sources/ft_width.c.i
-
-.PHONY : sources/ft_width.i
-
-# target to preprocess a source file
-sources/ft_width.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_width.c.i
-.PHONY : sources/ft_width.c.i
-
-sources/ft_width.s: sources/ft_width.c.s
-
-.PHONY : sources/ft_width.s
-
-# target to generate assembly for a file
-sources/ft_width.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_width.c.s
-.PHONY : sources/ft_width.c.s
 
 sources/main.o: sources/main.c.o
 
@@ -2445,9 +2391,6 @@ help:
 	@echo "... libft/src/get_next_line.o"
 	@echo "... libft/src/get_next_line.i"
 	@echo "... libft/src/get_next_line.s"
-	@echo "... sources/ft_accuracy.o"
-	@echo "... sources/ft_accuracy.i"
-	@echo "... sources/ft_accuracy.s"
 	@echo "... sources/ft_c.o"
 	@echo "... sources/ft_c.i"
 	@echo "... sources/ft_c.s"
@@ -2466,9 +2409,6 @@ help:
 	@echo "... sources/ft_type.o"
 	@echo "... sources/ft_type.i"
 	@echo "... sources/ft_type.s"
-	@echo "... sources/ft_width.o"
-	@echo "... sources/ft_width.i"
-	@echo "... sources/ft_width.s"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"

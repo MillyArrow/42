@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_printf
+NAME = libftprintf.a
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -35,7 +35,9 @@ O_DIRS = $(patsubst $(SRC_DIR)%, $(O_DIR)%, $(SRC_DIRS))
 all: $(NAME)
 
 $(NAME): $(LIB_FT_FILE) $(O_DIRS) $(O_FILES)
-	@gcc -g -o $(NAME) $(FLAGS) $(O_FILES) $(INCLUDES) $(LIB_FT_FLAGS)
+	@make -C $(LIB_FT_DIR)
+	@cp $(LIB_FT_FILE) $(NAME)
+	@ar rc $(NAME) $(O_FILES)
 	@echo "make: Done building \`$(NAME)'."
 
 $(O_DIRS):
