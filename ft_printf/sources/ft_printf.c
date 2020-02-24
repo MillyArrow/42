@@ -40,7 +40,7 @@ int			ft_printf(const char *restrict format, ...)
 	{
 		if (str[i] != '%')
 			ft_putchar(str[i++]);
-		else 
+		else
 		{
 			ft_format_specifier(str, &i, specifier);
 			ft_type(specifier,parameters);

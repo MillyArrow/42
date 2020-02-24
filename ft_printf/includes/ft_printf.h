@@ -24,8 +24,6 @@ typedef struct	s_spec
 	int 		accuracy;
 	char		length[3];
 	char		type;
-	char		*format;
-	char		plus;
 	char		minus;
 }				t_spec;
 

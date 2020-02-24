@@ -6,6 +6,6 @@ int main()
 	char c;
 
 	c = 'f';
-	printf("%+-8.5d\n", 34);
-	ft_printf("%+-8.5d", 34);
+	printf("%10.3d\n", 101);
+	ft_printf("%10.3s", "abcdefg");
 }
