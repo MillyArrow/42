@@ -2148,6 +2148,33 @@ sources/ft_type.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_type.c.s
 .PHONY : sources/ft_type.c.s
 
+sources/ft_width.o: sources/ft_width.c.o
+
+.PHONY : sources/ft_width.o
+
+# target to build an object file
+sources/ft_width.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_width.c.o
+.PHONY : sources/ft_width.c.o
+
+sources/ft_width.i: sources/ft_width.c.i
+
+.PHONY : sources/ft_width.i
+
+# target to preprocess a source file
+sources/ft_width.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_width.c.i
+.PHONY : sources/ft_width.c.i
+
+sources/ft_width.s: sources/ft_width.c.s
+
+.PHONY : sources/ft_width.s
+
+# target to generate assembly for a file
+sources/ft_width.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_width.c.s
+.PHONY : sources/ft_width.c.s
+
 sources/main.o: sources/main.c.o
 
 .PHONY : sources/main.o
@@ -2409,6 +2436,9 @@ help:
 	@echo "... sources/ft_type.o"
 	@echo "... sources/ft_type.i"
 	@echo "... sources/ft_type.s"
+	@echo "... sources/ft_width.o"
+	@echo "... sources/ft_width.i"
+	@echo "... sources/ft_width.s"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"

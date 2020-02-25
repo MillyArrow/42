@@ -315,6 +315,9 @@
 		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_type.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_width.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/marrow/42/ft_printf/sources/main.c">
 			<Option target="ft_printf"/>
 		</Unit>

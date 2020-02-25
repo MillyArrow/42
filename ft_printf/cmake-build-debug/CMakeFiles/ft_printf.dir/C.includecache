@@ -24,9 +24,7 @@ stdlib.h
 limits.h
 -
 
-/Users/marrow/42/ft_printf/sources/main.c
+/Users/marrow/42/ft_printf/sources/ft_d.c
 ft_printf.h
 /Users/marrow/42/ft_printf/sources/ft_printf.h
-stdio.h
--
 

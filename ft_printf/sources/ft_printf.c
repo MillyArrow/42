@@ -19,6 +19,7 @@ void		initialization(t_spec *specifier)
 	specifier->accuracy = 0;
 	ft_bzero(specifier->length, 3);
 	specifier->type = 0;
+	specifier->minus = 0;
 }
 
 int			ft_printf(const char *restrict format, ...)
@@ -35,13 +36,13 @@ int			ft_printf(const char *restrict format, ...)
 	va_start(parameters, format);
 	i = 0;
 	specifier = (t_spec*)ft_memalloc(sizeof(t_spec));
-	initialization(specifier);
 	while (str[i])
 	{
 		if (str[i] != '%')
 			ft_putchar(str[i++]);
 		else
 		{
+			initialization(specifier);
 			ft_format_specifier(str, &i, specifier);
 			ft_type(specifier,parameters);
 		}
