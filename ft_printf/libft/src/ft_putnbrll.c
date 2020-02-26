@@ -6,13 +6,13 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 06:12:49 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/12 06:12:49 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/25 08:27:18 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbrll(__int64_t n)
+void	ft_putnbrll(__int64_t n, int base)
 {
 	if (n > LLONG_MAX || n < LLONG_MIN)
 		return ;
@@ -23,11 +23,11 @@ void	ft_putnbrll(__int64_t n)
 	}
 	if (n < 0)
 		n *= -1;
-	if (n < 10)
+	if (n < base)
 	{
 		ft_putchar(n + '0');
 		return ;
 	}
-	ft_putnbrll(n / 10);
-	ft_putchar((char)((n % 10) + '0'));
+	ft_putnbrll(n / base, base);
+	ft_putchar((char)((n % base) + '0'));
 }

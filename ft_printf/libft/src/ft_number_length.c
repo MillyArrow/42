@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_number_length(intmax_t number)
+int		ft_number_length(intmax_t number, int base)
 {
 	int length;
 
@@ -22,7 +22,7 @@ int		ft_number_length(intmax_t number)
 		length++;
 		number *= -1;
 	}
-	while ((number /= 10) > 0)
+	while ((number /= base) > 0)
 		length++;
 	return (length);
 }

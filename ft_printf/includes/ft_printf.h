@@ -25,6 +25,7 @@ typedef struct	s_spec
 	char		length[3];
 	char		type;
 	char		minus;
+	int         iszero;
 }				t_spec;
 
 int				ft_printf(const char *restrict format, ...);
@@ -45,5 +46,6 @@ void			ft_type(t_spec *specifier, va_list args);
 void			ft_d(t_spec *specifier, va_list args);
 void			ft_c(t_spec *specifaer, va_list args);
 void			ft_s(t_spec *specifaer, va_list args);
+void			ft_o(t_spec *specifier, va_list args);
 
 #endif

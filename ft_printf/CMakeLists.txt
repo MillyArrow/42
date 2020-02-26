@@ -81,7 +81,9 @@ add_executable(ft_printf
         sources/ft_c.c
         sources/ft_d.c
         sources/ft_format_specifier.c
+        sources/ft_o.c
         sources/ft_printf.c
         sources/ft_s.c
         sources/ft_type.c
-        sources/main.c sources/ft_width.c)
+        sources/ft_width.c
+        sources/main.c)

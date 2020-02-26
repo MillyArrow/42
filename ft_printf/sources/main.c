@@ -6,6 +6,6 @@ int main()
 	char c;
 
 	c = 'f';
-	printf("%.0d", 0);
-	ft_printf("%.0d", 0);
+	//ft_printf("%llu\n", 22337203685477);
+   // printf("%llu\n", 22337203685477);
 }

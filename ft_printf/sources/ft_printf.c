@@ -20,6 +20,7 @@ void		initialization(t_spec *specifier)
 	ft_bzero(specifier->length, 3);
 	specifier->type = 0;
 	specifier->minus = 0;
+	specifier->iszero = 0;
 }
 
 int			ft_printf(const char *restrict format, ...)

@@ -25,6 +25,9 @@ void		ft_len_width(t_spec *specifier,int *length, int *tmp)
 	if (specifier->minus == 1 && specifier->flag[4] == '0' \
 		&& specifier->accuracy == -1)
 		ft_putchar('-');
+    if (specifier->flag[3] == '#' && specifier->iszero == 0 \
+	&& specifier->accuracy == -1)
+        (*length)--;
 }
 
 void		ft_width(t_spec *specifier, int length)

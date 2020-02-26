@@ -51,6 +51,8 @@ void		ft_accuracy(t_spec *specifier, int length)
 	if (specifier->minus != 1 && specifier->flag[4] == '0' \
 			&& specifier->flag[1] == '+')
 		ft_putchar('+');
+	if (specifier->flag[3] == '#' && specifier->iszero == 0)
+        length--;
 	while (length-- > 0)
 		ft_putchar('0');
 }
@@ -72,7 +74,7 @@ void		display_d(t_spec *specifier, __int64_t *number, int *length)
 		if (specifier->minus == 1 && specifier->accuracy == -1 \
 			&& !(specifier->width))
 			ft_putchar('-');
-		ft_putnbrll(*number);
+		ft_putnbrll(*number, 10);
 	}
 }
 
@@ -82,7 +84,7 @@ void		ft_d(t_spec *specifier, va_list args)
 	int			length;
 
 	number = get_number(specifier, args);
-	length = ft_number_length(number);
+	length = ft_number_length(number, 10);
 	if (specifier->accuracy == 0)
 		length = 0;
 	if (specifier->flag[0] == '-')
@@ -97,7 +99,7 @@ void		ft_d(t_spec *specifier, va_list args)
 			ft_putchar('+');
 		ft_accuracy(specifier, length);
 		if (specifier->accuracy != 0)
-			ft_putnbrll(number);
+			ft_putnbrll(number, 10);
 		ft_width(specifier, length);
 		return ;
 	}

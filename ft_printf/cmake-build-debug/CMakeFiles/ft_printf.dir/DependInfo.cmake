@@ -76,6 +76,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/marrow/42/ft_printf/sources/ft_c.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_c.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_d.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_d.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_format_specifier.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_format_specifier.c.o"
+  "/Users/marrow/42/ft_printf/sources/ft_o.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_o.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_printf.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_printf.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_s.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_s.c.o"
   "/Users/marrow/42/ft_printf/sources/ft_type.c" "/Users/marrow/42/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/sources/ft_type.c.o"
