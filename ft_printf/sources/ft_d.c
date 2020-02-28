@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 20:40:44 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/28 09:02:51 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/28 11:12:13 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_putnbrs(__int64_t n, int base, t_spec *spec)
         n *= -1;
     if (n < base)
     {
-        ft_putchar(n + '0');
+        ft_putch(n + '0', spec);
         return ;
     }
     ft_putnbrs(n / base, base, spec);
