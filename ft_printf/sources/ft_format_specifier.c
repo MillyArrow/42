@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 20:13:23 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/18 20:19:01 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/27 22:02:40 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ t_spec			*ft_format_specifier(char *str, size_t *i, t_spec *specifier)
 	ft_set_width(str, i, specifier);
 	ft_set_accuracy(str, i, specifier);
 	ft_set_length(str, i, specifier);
+	if (str[*i] == '%' && (*i)++)
+		specifier->type = '%';
 	if ((str[*i] == 'd' || str[*i] == 'i') && (*i)++)
 		specifier->type = 'd';
 	if (str[*i] == 'o' && (*i)++)

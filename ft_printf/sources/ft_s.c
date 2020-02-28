@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 17:27:11 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/18 20:33:45 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/28 09:00:00 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,18 @@ void		ft_s(t_spec *specifaer, va_list args)
 	{
 		if (specifaer->flag[0] == '-')
 		{
-			ft_putstr(length);
+			ft_putstrs(length, specifaer);
 			while (i++ < (specifaer->width - len))
-				ft_putchar(' ');
+				ft_putch(' ', specifaer);
 			return ;
 		}
 		else
 		{
 			while (i++ < (specifaer->width - len))
-				ft_putchar(' ');
-			ft_putstr(length);
+				ft_putch(' ', specifaer);
+			ft_putstrs(length, specifaer);
 			return ;
 		}
 	}
-	ft_putstr(length);
+	ft_putstrs(length, specifaer);
 }

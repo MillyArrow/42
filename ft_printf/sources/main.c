@@ -3,9 +3,6 @@
 
 int main()
 {
-	char c;
-
-	c = 'f';
-	//ft_printf("%llu\n", 22337203685477);
-   // printf("%llu\n", 22337203685477);
+	ft_printf("%08.3d\n", -8473);
+	printf("%08.3d", -8473);
 }

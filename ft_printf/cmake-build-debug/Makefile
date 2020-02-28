@@ -1986,6 +1986,33 @@ libft/src/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/src/get_next_line.c.s
 .PHONY : libft/src/get_next_line.c.s
 
+sources/ft_big_X.o: sources/ft_big_X.c.o
+
+.PHONY : sources/ft_big_X.o
+
+# target to build an object file
+sources/ft_big_X.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_big_X.c.o
+.PHONY : sources/ft_big_X.c.o
+
+sources/ft_big_X.i: sources/ft_big_X.c.i
+
+.PHONY : sources/ft_big_X.i
+
+# target to preprocess a source file
+sources/ft_big_X.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_big_X.c.i
+.PHONY : sources/ft_big_X.c.i
+
+sources/ft_big_X.s: sources/ft_big_X.c.s
+
+.PHONY : sources/ft_big_X.s
+
+# target to generate assembly for a file
+sources/ft_big_X.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_big_X.c.s
+.PHONY : sources/ft_big_X.c.s
+
 sources/ft_c.o: sources/ft_c.c.o
 
 .PHONY : sources/ft_c.o
@@ -2094,6 +2121,60 @@ sources/ft_o.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_o.c.s
 .PHONY : sources/ft_o.c.s
 
+sources/ft_p.o: sources/ft_p.c.o
+
+.PHONY : sources/ft_p.o
+
+# target to build an object file
+sources/ft_p.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_p.c.o
+.PHONY : sources/ft_p.c.o
+
+sources/ft_p.i: sources/ft_p.c.i
+
+.PHONY : sources/ft_p.i
+
+# target to preprocess a source file
+sources/ft_p.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_p.c.i
+.PHONY : sources/ft_p.c.i
+
+sources/ft_p.s: sources/ft_p.c.s
+
+.PHONY : sources/ft_p.s
+
+# target to generate assembly for a file
+sources/ft_p.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_p.c.s
+.PHONY : sources/ft_p.c.s
+
+sources/ft_pct.o: sources/ft_pct.c.o
+
+.PHONY : sources/ft_pct.o
+
+# target to build an object file
+sources/ft_pct.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_pct.c.o
+.PHONY : sources/ft_pct.c.o
+
+sources/ft_pct.i: sources/ft_pct.c.i
+
+.PHONY : sources/ft_pct.i
+
+# target to preprocess a source file
+sources/ft_pct.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_pct.c.i
+.PHONY : sources/ft_pct.c.i
+
+sources/ft_pct.s: sources/ft_pct.c.s
+
+.PHONY : sources/ft_pct.s
+
+# target to generate assembly for a file
+sources/ft_pct.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_pct.c.s
+.PHONY : sources/ft_pct.c.s
+
 sources/ft_printf.o: sources/ft_printf.c.o
 
 .PHONY : sources/ft_printf.o
@@ -2175,6 +2256,33 @@ sources/ft_type.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_type.c.s
 .PHONY : sources/ft_type.c.s
 
+sources/ft_u.o: sources/ft_u.c.o
+
+.PHONY : sources/ft_u.o
+
+# target to build an object file
+sources/ft_u.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_u.c.o
+.PHONY : sources/ft_u.c.o
+
+sources/ft_u.i: sources/ft_u.c.i
+
+.PHONY : sources/ft_u.i
+
+# target to preprocess a source file
+sources/ft_u.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_u.c.i
+.PHONY : sources/ft_u.c.i
+
+sources/ft_u.s: sources/ft_u.c.s
+
+.PHONY : sources/ft_u.s
+
+# target to generate assembly for a file
+sources/ft_u.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_u.c.s
+.PHONY : sources/ft_u.c.s
+
 sources/ft_width.o: sources/ft_width.c.o
 
 .PHONY : sources/ft_width.o
@@ -2201,6 +2309,33 @@ sources/ft_width.s: sources/ft_width.c.s
 sources/ft_width.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_width.c.s
 .PHONY : sources/ft_width.c.s
+
+sources/ft_x.o: sources/ft_x.c.o
+
+.PHONY : sources/ft_x.o
+
+# target to build an object file
+sources/ft_x.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_x.c.o
+.PHONY : sources/ft_x.c.o
+
+sources/ft_x.i: sources/ft_x.c.i
+
+.PHONY : sources/ft_x.i
+
+# target to preprocess a source file
+sources/ft_x.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_x.c.i
+.PHONY : sources/ft_x.c.i
+
+sources/ft_x.s: sources/ft_x.c.s
+
+.PHONY : sources/ft_x.s
+
+# target to generate assembly for a file
+sources/ft_x.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_x.c.s
+.PHONY : sources/ft_x.c.s
 
 sources/main.o: sources/main.c.o
 
@@ -2445,6 +2580,9 @@ help:
 	@echo "... libft/src/get_next_line.o"
 	@echo "... libft/src/get_next_line.i"
 	@echo "... libft/src/get_next_line.s"
+	@echo "... sources/ft_big_X.o"
+	@echo "... sources/ft_big_X.i"
+	@echo "... sources/ft_big_X.s"
 	@echo "... sources/ft_c.o"
 	@echo "... sources/ft_c.i"
 	@echo "... sources/ft_c.s"
@@ -2457,6 +2595,12 @@ help:
 	@echo "... sources/ft_o.o"
 	@echo "... sources/ft_o.i"
 	@echo "... sources/ft_o.s"
+	@echo "... sources/ft_p.o"
+	@echo "... sources/ft_p.i"
+	@echo "... sources/ft_p.s"
+	@echo "... sources/ft_pct.o"
+	@echo "... sources/ft_pct.i"
+	@echo "... sources/ft_pct.s"
 	@echo "... sources/ft_printf.o"
 	@echo "... sources/ft_printf.i"
 	@echo "... sources/ft_printf.s"
@@ -2466,9 +2610,15 @@ help:
 	@echo "... sources/ft_type.o"
 	@echo "... sources/ft_type.i"
 	@echo "... sources/ft_type.s"
+	@echo "... sources/ft_u.o"
+	@echo "... sources/ft_u.i"
+	@echo "... sources/ft_u.s"
 	@echo "... sources/ft_width.o"
 	@echo "... sources/ft_width.i"
 	@echo "... sources/ft_width.s"
+	@echo "... sources/ft_x.o"
+	@echo "... sources/ft_x.i"
+	@echo "... sources/ft_x.s"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"

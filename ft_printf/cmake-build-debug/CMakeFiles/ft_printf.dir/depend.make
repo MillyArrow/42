@@ -207,6 +207,10 @@ CMakeFiles/ft_printf.dir/libft/src/ft_toupper.c.o: ../libft/src/ft_toupper.c
 CMakeFiles/ft_printf.dir/libft/src/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/libft/src/get_next_line.c.o: ../libft/src/get_next_line.c
 
+CMakeFiles/ft_printf.dir/sources/ft_big_X.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/sources/ft_big_X.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/sources/ft_big_X.c.o: ../sources/ft_big_X.c
+
 CMakeFiles/ft_printf.dir/sources/ft_c.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_c.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_c.c.o: ../sources/ft_c.c
@@ -223,6 +227,14 @@ CMakeFiles/ft_printf.dir/sources/ft_o.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_o.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_o.c.o: ../sources/ft_o.c
 
+CMakeFiles/ft_printf.dir/sources/ft_p.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/sources/ft_p.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/sources/ft_p.c.o: ../sources/ft_p.c
+
+CMakeFiles/ft_printf.dir/sources/ft_pct.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/sources/ft_pct.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/sources/ft_pct.c.o: ../sources/ft_pct.c
+
 CMakeFiles/ft_printf.dir/sources/ft_printf.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_printf.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_printf.c.o: ../sources/ft_printf.c
@@ -235,9 +247,17 @@ CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_type.c.o: ../sources/ft_type.c
 
+CMakeFiles/ft_printf.dir/sources/ft_u.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/sources/ft_u.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/sources/ft_u.c.o: ../sources/ft_u.c
+
 CMakeFiles/ft_printf.dir/sources/ft_width.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/ft_width.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/sources/ft_width.c.o: ../sources/ft_width.c
+
+CMakeFiles/ft_printf.dir/sources/ft_x.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/sources/ft_x.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/sources/ft_x.c.o: ../sources/ft_x.c
 
 CMakeFiles/ft_printf.dir/sources/main.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/sources/main.c.o: ../libft/includes/libft.h

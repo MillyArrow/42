@@ -297,6 +297,9 @@
 		<Unit filename="/Users/marrow/42/ft_printf/libft/src/get_next_line.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_big_X.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_c.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -309,6 +312,12 @@
 		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_o.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_p.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_pct.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -318,7 +327,13 @@
 		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_type.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_u.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_width.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_x.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/marrow/42/ft_printf/sources/main.c">

@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 23:29:48 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/12 14:55:50 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/28 09:02:19 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,20 @@ void		initialization(t_spec *specifier)
 	specifier->type = 0;
 	specifier->minus = 0;
 	specifier->iszero = 0;
+	specifier->len = 0;
+}
+
+void         ft_putch(char c, t_spec *spec)
+{
+    write(1, &c, 1);
+    spec->len += 1;
+}
+
+void	ft_putstrs(char const *s, t_spec *spec)
+{
+    if (s)
+        while (*s)
+            ft_putch(*s++, spec);
 }
 
 int			ft_printf(const char *restrict format, ...)
@@ -40,14 +54,17 @@ int			ft_printf(const char *restrict format, ...)
 	while (str[i])
 	{
 		if (str[i] != '%')
-			ft_putchar(str[i++]);
+		{
+            ft_putchar(str[i++]);
+            printed++;
+        }
 		else
 		{
 			initialization(specifier);
 			ft_format_specifier(str, &i, specifier);
 			ft_type(specifier,parameters);
+            printed += specifier->len;
 		}
-		printed++;
 	}
 	va_end(parameters);
 	return (printed);
