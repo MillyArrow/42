@@ -3,6 +3,7 @@
 
 int main()
 {
-	ft_printf("%d", 1);
-	printf("%d", 1);
+    ft_printf("%lu\n", -42);
+    printf("%lu", -42);
+    return (0);
 }

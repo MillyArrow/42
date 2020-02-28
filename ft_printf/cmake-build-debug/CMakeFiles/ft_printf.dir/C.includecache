@@ -28,3 +28,13 @@ limits.h
 ft_printf.h
 /Users/marrow/42/ft_printf/sources/ft_printf.h
 
+/Users/marrow/42/ft_printf/sources/ft_width.c
+ft_printf.h
+/Users/marrow/42/ft_printf/sources/ft_printf.h
+
+/Users/marrow/42/ft_printf/sources/main.c
+ft_printf.h
+/Users/marrow/42/ft_printf/sources/ft_printf.h
+stdio.h
+-
+

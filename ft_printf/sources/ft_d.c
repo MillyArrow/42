@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 20:40:44 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/28 11:12:13 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/28 13:46:07 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_putnbrs(__int64_t n, int base, t_spec *spec)
         return ;
     if (n == LLONG_MIN)
     {
-        ft_putstr("-9223372036854775808");
+        ft_putstrs("9223372036854775808", spec);
         return ;
     }
     if (n < 0)
@@ -55,7 +55,7 @@ void	ft_putnbrs(__int64_t n, int base, t_spec *spec)
 
 void		ft_accuracy(t_spec *specifier, int length)
 {
-	if (length >= (int)specifier->accuracy)
+	if (length > (int)specifier->accuracy)
 	{
 		if (specifier->minus == 1 && specifier->accuracy != -1 \
 		&& specifier->flag[0] != '-')
@@ -66,7 +66,7 @@ void		ft_accuracy(t_spec *specifier, int length)
 		return ;
 	}
 	length = (int)specifier->accuracy - length;
-	if (specifier->minus == 1 && length++ && specifier->flag[0] != '-')
+	if (specifier->minus == 1 && ++length && specifier->flag[0] != '-')
 		ft_putch('-',specifier);
 	if (specifier->minus != 1 && specifier->flag[4] == '0' \
 			&& specifier->flag[1] == '+')
@@ -87,7 +87,7 @@ void		display_d(t_spec *specifier, __int64_t *number, int *length)
 	specifier->flag[4] != '0')
 		ft_putch('+', specifier);
 	ft_accuracy(specifier, *length);
-	if (specifier->accuracy == 0)
+	if (specifier->accuracy == 0 && *number == 0)
 		return ;
 	if (specifier->flag[0] != '-')
 	{
@@ -105,7 +105,7 @@ void		ft_d(t_spec *specifier, va_list args)
 
 	number = get_number(specifier, args);
 	length = ft_number_length(number, 10);
-	if (specifier->accuracy == 0)
+	if (specifier->accuracy == 0 && number == 0)
 		length = 0;
 	if (specifier->flag[0] == '-')
 	{

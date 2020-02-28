@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 03:23:31 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/28 03:30:11 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/28 13:17:25 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_len_width(t_spec *specifier,int *length, int *tmp)
 {
-	if ((*length) < (int)specifier->accuracy && specifier->accuracy != -1 && ++(*tmp))
+	if ((*length) <= (int)specifier->accuracy && specifier->accuracy != -1 && ++(*tmp))
 		*length = (int)((int)specifier->width - specifier->accuracy);
 	else
 		*length = (int)(specifier->width - *length);
@@ -23,7 +23,7 @@ void		ft_len_width(t_spec *specifier,int *length, int *tmp)
 		specifier->flag[1] != '+' && specifier->minus != 1))
 		(*length)--;
 	if (specifier->minus == 1 && specifier->flag[4] == '0' \
-		&& specifier->accuracy == -1)
+		&& specifier->accuracy == -1 && specifier->flag[0] != '-')
 		ft_putch('-', specifier);
     if (specifier->type == 'o' && specifier->flag[3] == '#' && specifier->iszero == 0 && !(*tmp))
         (*length)--;

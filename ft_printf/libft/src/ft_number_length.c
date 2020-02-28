@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 05:02:40 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/12 05:04:15 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/28 13:08:24 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int		ft_number_length(intmax_t number, int base)
 	int length;
 
 	length = 1;
+    if (number == LLONG_MIN)
+        return (20);
 	if (number < 0)
 	{
 		length++;
