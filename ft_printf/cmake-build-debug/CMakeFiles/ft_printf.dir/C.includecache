@@ -11,7 +11,7 @@ stdarg.h
 -
 libft.h
 ../includes/libft.h
-stdio.h
+limits.h
 -
 
 ../libft/includes/libft.h
@@ -23,14 +23,6 @@ stdlib.h
 -
 limits.h
 -
-
-/Users/marrow/42/ft_printf/sources/ft_d.c
-ft_printf.h
-/Users/marrow/42/ft_printf/sources/ft_printf.h
-
-/Users/marrow/42/ft_printf/sources/ft_width.c
-ft_printf.h
-/Users/marrow/42/ft_printf/sources/ft_printf.h
 
 /Users/marrow/42/ft_printf/sources/main.c
 ft_printf.h

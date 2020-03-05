@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 23:29:48 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/28 09:02:19 by marrow           ###   ########.fr       */
+/*   Updated: 2020/03/01 00:36:59 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,52 +22,63 @@ void		initialization(t_spec *specifier)
 	specifier->minus = 0;
 	specifier->iszero = 0;
 	specifier->len = 0;
+	specifier->len_f = 0;
+	specifier->inf_nan = 0;
 }
 
-void         ft_putch(char c, t_spec *spec)
+void		ft_putch(char c, t_spec *spec)
 {
-    write(1, &c, 1);
-    spec->len += 1;
+	write(1, &c, 1);
+	spec->len += 1;
 }
 
-void	ft_putstrs(char const *s, t_spec *spec)
+void		ft_putstrs(char const *s, t_spec *spec)
 {
-    if (s)
-        while (*s)
-            ft_putch(*s++, spec);
+	if (s)
+		while (*s)
+			ft_putch(*s++, spec);
 }
 
-int			ft_printf(const char *restrict format, ...)
+int			ft_dota(va_list parameters,\
+const char *restrict format)
 {
-	va_list	parameters;
-	size_t	printed;
 	char	*str;
-	t_spec	*specifier;
 	size_t	i;
+	size_t	printed;
+	t_spec	*specifier;
 
 	str = (char*)format;
 	printed = 0;
 	specifier = NULL;
-	va_start(parameters, format);
 	i = 0;
 	specifier = (t_spec*)ft_memalloc(sizeof(t_spec));
 	while (str[i])
 	{
 		if (str[i] != '%')
 		{
-            ft_putchar(str[i++]);
-            printed++;
-        }
+			ft_putchar(str[i++]);
+			printed++;
+		}
 		else
 		{
 			initialization(specifier);
 			ft_format_specifier(str, &i, specifier);
-			ft_type(specifier,parameters);
-            printed += specifier->len;
+			ft_type(specifier, parameters);
+			printed += specifier->len;
 		}
 	}
-	va_end(parameters);
+	free(specifier);
 	return (printed);
 }
 
+int			ft_printf(const char *restrict format, ...)
+{
+	int			printed;
+	va_list		parameters;
 
+	printed = 0;
+	va_start(parameters, format);
+	printed = ft_dota(parameters, format);
+	va_end(parameters);
+	return (printed);
+}

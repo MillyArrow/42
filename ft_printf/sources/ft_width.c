@@ -6,15 +6,16 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 03:23:31 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/28 13:17:25 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/29 20:27:32 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		ft_len_width(t_spec *specifier,int *length, int *tmp)
+void		ft_len_width(t_spec *specifier, int *length, int *tmp)
 {
-	if ((*length) <= (int)specifier->accuracy && specifier->accuracy != -1 && ++(*tmp))
+	if ((*length) <= (int)specifier->accuracy \
+	&& specifier->accuracy != -1 && ++(*tmp))
 		*length = (int)((int)specifier->width - specifier->accuracy);
 	else
 		*length = (int)(specifier->width - *length);
@@ -25,12 +26,31 @@ void		ft_len_width(t_spec *specifier,int *length, int *tmp)
 	if (specifier->minus == 1 && specifier->flag[4] == '0' \
 		&& specifier->accuracy == -1 && specifier->flag[0] != '-')
 		ft_putch('-', specifier);
-    if (specifier->type == 'o' && specifier->flag[3] == '#' && specifier->iszero == 0 && !(*tmp))
-        (*length)--;
-    if ((specifier->type == 'x' || specifier->type == 'X') && specifier->flag[3] == '#' && specifier->iszero == 0 && !(*tmp))
-        (*length) -= 2;
-    if (specifier->type == 'p')
+	if (specifier->type == 'o' && specifier->flag[3] == '#' \
+	&& specifier->iszero == 0 && !(*tmp))
+		(*length)--;
+	if ((specifier->type == 'x' || specifier->type == 'X') \
+	&& specifier->flag[3] == '#' && specifier->iszero == 0 && !(*tmp))
 		(*length) -= 2;
+	if (specifier->type == 'p')
+		(*length) -= 2;
+}
+
+void		print_width(t_spec *specifier, int *length, int *check)
+{
+	while ((*length)-- > 0)
+	{
+		if (specifier->flag[4] == '0' && specifier->accuracy == -1 \
+		&& specifier->flag[0] != '-')
+		{
+			if (specifier->minus != 1 && specifier->flag[4] == '0' \
+				&& specifier->flag[1] == '+' && (*check)++ == 1)
+				ft_putch('+', specifier);
+			ft_putch('0', specifier);
+		}
+		else
+			ft_putch(' ', specifier);
+	}
 }
 
 void		ft_width(t_spec *specifier, int length)
@@ -43,18 +63,10 @@ void		ft_width(t_spec *specifier, int length)
 	if (specifier->width <= 0)
 		return ;
 	ft_len_width(specifier, &length, &tmp);
-	while (length-- > 0)
-	{
-		if (specifier->flag[4] == '0' && specifier->accuracy == -1 && specifier->flag[0] != '-')
-		{
-			if (specifier->minus != 1 && specifier->flag[4] == '0' \
-				&& specifier->flag[1] == '+' && check++ == 1)
-				ft_putch('+', specifier);
-			ft_putch('0', specifier);
-		}
-		else
-			ft_putch(' ',specifier);
-	}
+	if (specifier->flag[1] == '+' && specifier->minus != 1 \
+	&& length <= 0 && specifier->accuracy == -1)
+		ft_putch('+', specifier);
+	print_width(specifier, &length, &check);
 	if (specifier->minus == 1 && specifier->flag[4] != '0' && \
 	specifier->flag[0] != '-' && specifier->accuracy == -1)
 		ft_putch('-', specifier);

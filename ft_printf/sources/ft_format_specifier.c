@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 20:13:23 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/27 22:02:40 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/29 21:17:18 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,18 @@
 t_spec			*ft_format_specifier(char *str, size_t *i, t_spec *specifier)
 {
 	(*i)++;
-	ft_set_flag(str, i, specifier);
-	ft_set_width(str, i, specifier);
-	ft_set_accuracy(str, i, specifier);
-	ft_set_length(str, i, specifier);
-	if (str[*i] == '%' && (*i)++)
-		specifier->type = '%';
-	if ((str[*i] == 'd' || str[*i] == 'i') && (*i)++)
-		specifier->type = 'd';
-	if (str[*i] == 'o' && (*i)++)
-		specifier->type = 'o';
-	if (str[*i] == 'u' && (*i)++)
-		specifier->type = 'u';
-	if (str[*i] == 'x' && (*i)++)
-		specifier->type = 'x';
-	if (str[*i] == 'X' && (*i)++)
-		specifier->type = 'X';
-	if (str[*i] == 'c' && (*i)++)
-		specifier->type = 'c';
-	if (str[*i] == 's' && (*i)++)
-		specifier->type = 's';
-	if (str[*i] == 'p' && (*i)++)
-		specifier->type = 'p';
+	if (str[*i])
+	{
+		ft_set_flag(str, i, specifier);
+		ft_set_width(str, i, specifier);
+		ft_set_accuracy(str, i, specifier);
+		ft_set_length(str, i, specifier);
+		if (ft_strchr("%diouxXcspfF", str[*i]))
+		{
+			specifier->type = str[*i];
+			(*i)++;
+		}
+	}
 	return (specifier);
 }
 
@@ -117,7 +107,7 @@ void			ft_set_accuracy(char *str, size_t *i, t_spec *specifier)
 
 void			ft_set_length(char *str, size_t *i, t_spec *specifier)
 {
-	if (str[*i] == 'h' && str[*i + 1] != 'h'  && (*i)++)
+	if (str[*i] == 'h' && str[*i + 1] != 'h' && (*i)++)
 		specifier->length[0] = 'h';
 	if (str[*i] == 'h' && str[*i + 1] == 'h')
 	{
@@ -133,4 +123,6 @@ void			ft_set_length(char *str, size_t *i, t_spec *specifier)
 		specifier->length[0] = 'l';
 		specifier->length[1] = 'l';
 	}
+    if (str[*i] == 'L' && str[*i + 1] != 'L' && (*i)++)
+        specifier->length[0] = 'L';
 }

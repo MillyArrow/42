@@ -6,13 +6,35 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 17:27:11 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/28 09:00:00 by marrow           ###   ########.fr       */
+/*   Updated: 2020/03/01 00:40:56 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		ft_s(t_spec *specifaer, va_list args)
+int			print_str(t_spec *specifier, size_t *i, size_t *len, char **length)
+{
+	if (specifier->width > *len)
+	{
+		if (specifier->flag[0] == '-')
+		{
+			ft_putstrs(*length, specifier);
+			while ((*i)++ < (specifier->width - *len))
+				ft_putch(' ', specifier);
+			return (0);
+		}
+		else
+		{
+			while ((*i)++ < (specifier->width - *len))
+				ft_putch(' ', specifier);
+			ft_putstrs(*length, specifier);
+			return (0);
+		}
+	}
+	return (1);
+}
+
+void		ft_s(t_spec *specifier, va_list args)
 {
 	char	*length;
 	size_t	len;
@@ -23,27 +45,12 @@ void		ft_s(t_spec *specifaer, va_list args)
 	if (length == NULL)
 		length = "(null)";
 	len = ft_strlen(length);
-	if (specifaer->accuracy != -1 && (size_t)specifaer->accuracy < len)
+	if (specifier->accuracy != -1 && (size_t)specifier->accuracy < len)
 	{
-		len = specifaer->accuracy;
+		len = specifier->accuracy;
 		length = ft_strsub(length, 0, len);
 	}
-	if (specifaer->width > len)
-	{
-		if (specifaer->flag[0] == '-')
-		{
-			ft_putstrs(length, specifaer);
-			while (i++ < (specifaer->width - len))
-				ft_putch(' ', specifaer);
-			return ;
-		}
-		else
-		{
-			while (i++ < (specifaer->width - len))
-				ft_putch(' ', specifaer);
-			ft_putstrs(length, specifaer);
-			return ;
-		}
-	}
-	ft_putstrs(length, specifaer);
+	if (!print_str(specifier, &i, &len, &length))
+		return ;
+	ft_putstrs(length, specifier);
 }

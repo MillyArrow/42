@@ -2067,6 +2067,33 @@ sources/ft_d.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_d.c.s
 .PHONY : sources/ft_d.c.s
 
+sources/ft_f.o: sources/ft_f.c.o
+
+.PHONY : sources/ft_f.o
+
+# target to build an object file
+sources/ft_f.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_f.c.o
+.PHONY : sources/ft_f.c.o
+
+sources/ft_f.i: sources/ft_f.c.i
+
+.PHONY : sources/ft_f.i
+
+# target to preprocess a source file
+sources/ft_f.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_f.c.i
+.PHONY : sources/ft_f.c.i
+
+sources/ft_f.s: sources/ft_f.c.s
+
+.PHONY : sources/ft_f.s
+
+# target to generate assembly for a file
+sources/ft_f.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/sources/ft_f.c.s
+.PHONY : sources/ft_f.c.s
+
 sources/ft_format_specifier.o: sources/ft_format_specifier.c.o
 
 .PHONY : sources/ft_format_specifier.o
@@ -2589,6 +2616,9 @@ help:
 	@echo "... sources/ft_d.o"
 	@echo "... sources/ft_d.i"
 	@echo "... sources/ft_d.s"
+	@echo "... sources/ft_f.o"
+	@echo "... sources/ft_f.i"
+	@echo "... sources/ft_f.s"
 	@echo "... sources/ft_format_specifier.o"
 	@echo "... sources/ft_format_specifier.i"
 	@echo "... sources/ft_format_specifier.s"

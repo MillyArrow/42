@@ -26,7 +26,6 @@ void		ft_width_pct(t_spec *specifier, int length)
 	}
 }
 
-
 void		ft_pct(t_spec *specifier)
 {
 	int length;
