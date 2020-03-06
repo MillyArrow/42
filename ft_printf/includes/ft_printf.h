@@ -29,6 +29,7 @@ typedef struct		s_spec
 	size_t			len;
 	size_t          len_f;
 	int             inf_nan;
+	int             plus;
 }					t_spec;
 void				ft_format_string_analysis(char **str, size_t *i);
 void				ft_flags(char **str, size_t *i);

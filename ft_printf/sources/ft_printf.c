@@ -24,6 +24,7 @@ void		initialization(t_spec *specifier)
 	specifier->len = 0;
 	specifier->len_f = 0;
 	specifier->inf_nan = 0;
+	specifier->plus = 0;
 }
 
 void		ft_putch(char c, t_spec *spec)

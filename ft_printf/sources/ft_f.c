@@ -118,13 +118,13 @@ void		display_f(t_spec *specifier, long double number, size_t int_part)
 		specifier->len_f++;
 	ft_width_f(specifier);
 	if (specifier->flag[1] == '+' && specifier->minus != 1 && \
-	specifier->flag[4] != '0' && ++specifier->len_f)
+	specifier->flag[4] != '0')
 		ft_putch('+', specifier);
 	if (specifier->accuracy == 0 && number == 0)
 		return ;
 	if (specifier->flag[0] != '-')
 	{
-		if (specifier->minus == 1)
+		if (specifier->minus == 1 && specifier->width == 0)
 			ft_putch('-', specifier);
 		ft_putnbr_f(specifier, number, int_part);
 		ft_f_precision(specifier,number);
@@ -133,15 +133,36 @@ void		display_f(t_spec *specifier, long double number, size_t int_part)
 
 void	ft_width_f(t_spec *specifier)
 {
+/*	if (specifier->flag[1] == '+' && specifier->minus != 1 \
+	&& specifier->plus++ == 0 && ++specifier->len_f )
+		ft_putch('+', specifier);*/
+	if (specifier->flag[1] == '+' && specifier->minus != 1 && \
+	specifier->flag[4] != '0' && specifier->plus++ == 0)
+		specifier->len_f++;
+	if (specifier->minus == 1 && specifier->flag[4] == '0' \
+		&& specifier->flag[0] != '-')
+		ft_putch('-', specifier);
+	if (specifier->len_f >= specifier->width && specifier->minus != 1 \
+	&& specifier->flag[4] == '0' && specifier->flag[1] == '+' && \
+	specifier->plus++ == 0 && ++specifier->len_f)
+		ft_putch('+', specifier);
 	while (specifier->len_f < specifier->width)
 	{
-		if (specifier->flag[4] == '0' && specifier->minus == 0 \
+		if (specifier->flag[4] == '0' && specifier->flag[0] != '-' \
 		&& specifier->inf_nan == 0)
-			write(1, "0", 1);
+		{
+			if (specifier->minus != 1 && specifier->flag[4] == '0' \
+				&& specifier->flag[1] == '+' && specifier->plus++ == 0 && ++specifier->len_f)
+				ft_putch('+', specifier);
+			ft_putch('0', specifier);
+		}
 		else
-			write(1, " ", 1);
+			ft_putch(' ', specifier);
 		specifier->width--;
 	}
+	if (specifier->minus == 1 && specifier->flag[4] != '0' && \
+	specifier->flag[0] != '-' && specifier->width != 0)
+		ft_putch('-', specifier);
 }
 
 void		ft_f(t_spec *specifier, va_list args)
@@ -191,7 +212,7 @@ void		ft_f(t_spec *specifier, va_list args)
 		if (specifier->minus == 1 && ++specifier->len_f)
 			ft_putch('-', specifier);
 		if (specifier->flag[1] == '+' && specifier->minus != 1 \
-			&& specifier->flag[4] != '0' && ++specifier->len_f)
+			&& specifier->plus++ == 0 && ++specifier->len_f)
 			ft_putch('+', specifier);
 		ft_putnbr_f(specifier, number, int_part);
 		ft_f_precision(specifier,number);
