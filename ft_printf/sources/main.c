@@ -5,9 +5,9 @@ int main()
 {
 	int a,b;
 
-  	a = ft_printf("this %.0f float", 1.6);
+  	a = ft_printf("%.19f",        1.025978548534310421934);
 	printf("ft_printf:%d\n", a);
-	b = printf("this %.0f float", 1.6);
+	b = printf("%.20f",        1.025978548534310421934);
 	printf("printf:%d\n", b);
 	return (0);
 }

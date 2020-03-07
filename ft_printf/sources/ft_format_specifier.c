@@ -123,6 +123,6 @@ void			ft_set_length(char *str, size_t *i, t_spec *specifier)
 		specifier->length[0] = 'l';
 		specifier->length[1] = 'l';
 	}
-    if (str[*i] == 'L' && str[*i + 1] != 'L' && (*i)++)
-        specifier->length[0] = 'L';
+	if (str[*i] == 'L' && str[*i + 1] != 'L' && (*i)++)
+		specifier->length[0] = 'L';
 }

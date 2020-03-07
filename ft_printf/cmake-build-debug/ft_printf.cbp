@@ -309,6 +309,9 @@
 		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_f.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_f_func.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/marrow/42/ft_printf/sources/ft_format_specifier.c">
 			<Option target="ft_printf"/>
 		</Unit>

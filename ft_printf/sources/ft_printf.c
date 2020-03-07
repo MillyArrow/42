@@ -55,11 +55,8 @@ const char *restrict format)
 	specifier = (t_spec*)ft_memalloc(sizeof(t_spec));
 	while (str[i])
 	{
-		if (str[i] != '%')
-		{
+		if (str[i] != '%' && ++printed)
 			ft_putchar(str[i++]);
-			printed++;
-		}
 		else
 		{
 			initialization(specifier);

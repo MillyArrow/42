@@ -53,6 +53,43 @@ void		print_width(t_spec *specifier, int *length, int *check)
 	}
 }
 
+void		print_width_f(t_spec *specifier)
+{
+	while (specifier->len_f < specifier->width)
+	{
+		if (specifier->flag[4] == '0' && specifier->flag[0] != '-' \
+		&& specifier->inf_nan == 0)
+		{
+			if (specifier->minus != 1 && specifier->flag[4] == '0' \
+				&& specifier->flag[1] == '+' && specifier->plus++ == 0 \
+				&& ++specifier->len_f)
+				ft_putch('+', specifier);
+			ft_putch('0', specifier);
+		}
+		else
+			ft_putch(' ', specifier);
+		specifier->width--;
+	}
+}
+
+void		ft_width_f(t_spec *specifier)
+{
+	if (specifier->flag[1] == '+' && specifier->minus != 1 && \
+	specifier->flag[4] != '0' && specifier->plus++ == 0)
+		specifier->len_f++;
+	if (specifier->minus == 1 && specifier->flag[4] == '0' \
+		&& specifier->flag[0] != '-')
+		ft_putch('-', specifier);
+	if (specifier->len_f >= specifier->width && specifier->minus != 1 \
+	&& specifier->flag[4] == '0' && specifier->flag[1] == '+' && \
+	specifier->plus++ == 0 && ++specifier->len_f)
+		ft_putch('+', specifier);
+	print_width_f(specifier);
+	if (specifier->minus == 1 && specifier->flag[4] != '0' && \
+	specifier->flag[0] != '-' && specifier->width != 0)
+		ft_putch('-', specifier);
+}
+
 void		ft_width(t_spec *specifier, int length)
 {
 	int tmp;

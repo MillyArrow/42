@@ -32,6 +32,7 @@ typedef struct		s_spec
 	int             plus;
 	__uint128_t      int_part;
 	size_t		    l_int_part;
+	char            chk;
 }					t_spec;
 void				ft_format_string_analysis(char **str, size_t *i);
 void				ft_flags(char **str, size_t *i);
@@ -70,4 +71,8 @@ void				ft_putnbrs_u(unsigned long long n,\
 unsigned long long base, t_spec *spec);
 void		ft_f(t_spec *specifier, va_list args);
 void	ft_width_f(t_spec *specifier);
+size_t         ft_l_num(long double number);
+long double	ft_real_part(t_spec *specifier, long double number);
+void     ft_round(t_spec *specifier, long double number);
+int         inf_nan(long double *number, t_spec *specifier);
 #endif

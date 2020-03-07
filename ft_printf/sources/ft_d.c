@@ -101,28 +101,28 @@ void		display_d(t_spec *specifier, __int64_t *number, int *length)
 
 void		ft_d(t_spec *specifier, va_list args)
 {
-    __int64_t	number;
-    int			length;
+	__int64_t	number;
+	int			length;
 
-    number = get_number(specifier, args);
-    length = ft_number_length(number, 10);
-    if (specifier->accuracy == 0 && number == 0)
-        length = 0;
-    if (specifier->flag[0] == '-')
-    {
-        if (specifier->flag[2] == ' ' && specifier->flag[1] != '+' && \
+	number = get_number(specifier, args);
+	length = ft_number_length(number, 10);
+	if (specifier->accuracy == 0 && number == 0)
+		length = 0;
+	if (specifier->flag[0] == '-')
+	{
+		if (specifier->flag[2] == ' ' && specifier->flag[1] != '+' && \
 		specifier->minus != 1)
-            ft_putch(' ', specifier);
-        if (specifier->minus == 1)
-            ft_putch('-', specifier);
-        if (specifier->flag[1] == '+' && specifier->minus != 1 \
+			ft_putch(' ', specifier);
+		if (specifier->minus == 1)
+			ft_putch('-', specifier);
+		if (specifier->flag[1] == '+' && specifier->minus != 1 \
 			&& specifier->flag[4] != '0')
-            ft_putch('+', specifier);
-        ft_accuracy(specifier, length);
-        if (specifier->accuracy != 0)
-            ft_putnbrs(number, 10, specifier);
-        ft_width(specifier, length);
-        return ;
-    }
-    display_d(specifier, &number, &length);
+			ft_putch('+', specifier);
+		ft_accuracy(specifier, length);
+		if (specifier->accuracy != 0)
+			ft_putnbrs(number, 10, specifier);
+		ft_width(specifier, length);
+		return ;
+	}
+	display_d(specifier, &number, &length);
 }

@@ -91,4 +91,4 @@ add_executable(ft_printf
         sources/ft_u.c
         sources/ft_width.c
         sources/ft_x.c
-        sources/main.c sources/ft_f.c)
+        sources/main.c sources/ft_f.c sources/ft_f_func.c)
