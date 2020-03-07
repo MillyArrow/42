@@ -3,8 +3,11 @@
 
 int main()
 {
-  	ft_printf("%.8Lf", 1.99999949l);
-  	write(1, "\n", 1);
-	printf("%.8Lf", 1.99999949l);
-    return (0);
+	int a,b;
+
+  	a = ft_printf("this %.0f float", 1.6);
+	printf("ft_printf:%d\n", a);
+	b = printf("this %.0f float", 1.6);
+	printf("printf:%d\n", b);
+	return (0);
 }

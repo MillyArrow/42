@@ -30,6 +30,8 @@ typedef struct		s_spec
 	size_t          len_f;
 	int             inf_nan;
 	int             plus;
+	__uint128_t      int_part;
+	size_t		    l_int_part;
 }					t_spec;
 void				ft_format_string_analysis(char **str, size_t *i);
 void				ft_flags(char **str, size_t *i);
